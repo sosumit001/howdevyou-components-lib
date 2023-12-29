@@ -5,7 +5,7 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sosumit/howdevyou-components-lib.git"
+    "url": "git+https://github.com/sosumit001/howdevyou-components-lib.git"
   },
   "scripts": {
     "build": "npm run build:esm && npm run build:cjs",
