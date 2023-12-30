@@ -1,10 +1,29 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-// import { MyCounter } from 'my-react-typescript-package'
-
+// import {Header} from '../../src'
+// import {Header} from '../../src/index'
+import {MyCounter} from 'howdevyou'
+// import {MyCounter} from '../../dist/esm'
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 root.render(
   <React.StrictMode>
+    {/* <Header
+      site_title='Sumit So'
+      site_description='Welcome to Sumo Web asd'
+      logo_src='#'
+      site_nav_links={[
+        {
+          name:"Home",
+          loc: "/"
+        },
+        {
+          name: "Blogs",
+          loc: "/blogs"
+        }
+      ]}
+
+    /> */}
+    <MyCounter/>
     <div>we gonna import text here</div>
   </React.StrictMode>,
 )

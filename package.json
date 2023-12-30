@@ -1,8 +1,10 @@
 {
   "name": "howdevyou",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "",
-  "main": "index.js",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/esm/index.d.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sosumit001/howdevyou-components-lib.git"
