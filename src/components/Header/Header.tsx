@@ -40,8 +40,8 @@ const Header = ({logo_src, site_title, site_description, site_nav_links}: THeade
 			<nav id="site-navigation" className="main-navigation">
 		     	<ul className="nav-menu">
 					{
-						site_nav_links.map(item => {
-							return <li className="nav-item" ><a href={item.loc}>{item.name}</a></li>
+						site_nav_links.map((item, key) => {
+							return <li className="nav-item" key={key} ><a href={item.loc}>{item.name}</a></li>
 						})
 					}
 				 </ul>
