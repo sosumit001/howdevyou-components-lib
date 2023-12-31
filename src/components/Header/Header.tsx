@@ -33,9 +33,11 @@ const Header = ({ logo_src, site_description, site_nav_links, header_width, site
           <ul className='nav-menu'>
             {site_nav_links.map((item, key) => {
               return (
-                <Link key={key} to={item.loc}>
+                <li key={key}>
+                <Link to={item.loc}>
                   {item.name}
                 </Link>
+                </li>
               )
             })}
           </ul>
