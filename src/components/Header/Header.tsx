@@ -8,7 +8,7 @@ type THeader = {
   margin_top?:string
   logo_src: string
   site_description: string
-  site_nav_links: Array<{ name: string; loc: string }>
+  site_nav_links: Array<{ name: string; loc: string, link_color: string, link_bg: string }>
 }
 
 const Header = ({ logo_src, site_description, site_nav_links, header_width, site_logo_width, margin_top }: THeader) => {
@@ -33,7 +33,7 @@ const Header = ({ logo_src, site_description, site_nav_links, header_width, site
           <ul className='nav-menu'>
             {site_nav_links.map((item, key) => {
               return (
-                <li key={key}>
+                <li style={{color:item.link_color, background:item.link_bg}} key={key}>
                 <Link to={item.loc}>
                   {item.name}
                 </Link>
