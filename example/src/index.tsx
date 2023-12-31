@@ -1,9 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-// import {Header} from '../../src'
-// import {Header} from '../../src/index'
-// import {Header} from 'howdevyou'
-// import {MyCounter} from '../../dist/esm'
+import { Header } from 'howdevyou'
+import site_logo from './assets/sumo.jpeg'
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 root.render(
   <React.StrictMode>
@@ -23,12 +21,14 @@ root.render(
       ]}
 
     /> */}
-    {/* <Header
-        logo_src={site_logo}
-        site_description='this is how waterfalls are made'
-        site_title='Waterfalls'
-        site_nav_links={[{name:"home", loc:"/"}, {name:"blog", loc: "/blog"}]}
-    /> */}
+    <Header
+      logo_src={site_logo}
+      site_description='A repository of Morten Sumit So’s thoughts'
+      site_nav_links={[
+        { name: 'home', loc: '/' },
+        { name: 'blog', loc: '/blog' },
+      ]}
+    />
     <div>we gonna import text here</div>
   </React.StrictMode>,
 )

@@ -6,6 +6,7 @@
 		"start": "parcel src/index.html"
 	},
 	"devDependencies": {
+		"@parcel/transformer-svg-react": "^2.10.3",
 		"@types/react": "^18.2.45",
 		"@types/react-dom": "^18.2.18",
 		"my-react-typescript-package": "^1.0.0",
@@ -14,6 +15,6 @@
 		"react-dom": "^18.2.0"
 	},
 	"dependencies": {
-		"howdevyou": "^1.0.3"
+		"howdevyou": "^1.0.4"
 	}
 }

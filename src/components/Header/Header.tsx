@@ -1,21 +1,25 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import './Header.css'
 
 type THeader = {
+  header_width?: string
+  site_logo_width?: string
+  margin_top?:string
   logo_src: string
   site_description: string
   site_nav_links: Array<{ name: string; loc: string }>
 }
 
-const Header = ({ logo_src, site_description, site_nav_links }: THeader) => {
+const Header = ({ logo_src, site_description, site_nav_links, header_width, site_logo_width, margin_top }: THeader) => {
   return (
-    <header id='masthead' className='site-header' role='banner'>
+    <header style={{ width: header_width, marginTop: margin_top}} id='masthead' className='site-header' role='banner'>
       <div className='site-container'>
         {/* site branding */}
         <div className='site-branding bg-black'>
           {/* site logo */}
           <a href='/' className='custom-logo-link' rel='home' aria-current='page'>
-            <img height={'80px'} src={logo_src} alt='Sumit So' />
+            <img width={site_logo_width} src={logo_src} alt='Sumit So' />
           </a>
 
           {/* site description */}
@@ -29,9 +33,9 @@ const Header = ({ logo_src, site_description, site_nav_links }: THeader) => {
           <ul className='nav-menu'>
             {site_nav_links.map((item, key) => {
               return (
-                <li className='nav-item' key={key}>
-                  <a href={item.loc}>{item.name}</a>
-                </li>
+                <Link key={key} to={item.loc}>
+                  {item.name}
+                </Link>
               )
             })}
           </ul>
